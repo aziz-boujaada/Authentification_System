@@ -1,4 +1,9 @@
-<?php ?>
+<?php
+//  require_once __DIR__ . '/../controllers/CondidateController.php';
+//  $c = new CondidateController();
+// $c->addCondidate();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +18,13 @@
   <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-green-200">
     <h2 class="text-2xl font-bold text-center mb-6 text-green-700">Register</h2>
 
-    <form class="space-y-4">
+    <form class="space-y-4" action="../controllers/RegisterController.php" method="post">
     
       <div>
         <label class="block text-sm font-medium text-green-700">First Name</label>
         <input 
           type="text"
+           name="first_name"
           placeholder="Enter your first name"
           class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
           required
@@ -30,6 +36,7 @@
         <label class="block text-sm font-medium text-green-700">Last Name</label>
         <input 
           type="text"
+           name="last_name"
           placeholder="Enter your last name"
           class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
           required
@@ -40,6 +47,7 @@
         <label class="block text-sm font-medium text-green-700">Email</label>
         <input 
           type="email"
+          name="email"
           placeholder="Enter your email"
           class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
           required
@@ -49,9 +57,8 @@
       <div>
         <label class="block text-sm font-medium text-green-700">Role</label>
        <select name="role" id="" class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
-         <option value=""></option>
-        <option value="condidate">Condidate</option>
-        <option value="recruteur">Recruteur</option>
+        <option value="condiadte">Condidate</option>
+        <option value="recruiter">Recruteur</option>
        </select>
       </div>
 
@@ -59,6 +66,7 @@
         <label class="block text-sm font-medium text-green-700">Password</label>
         <input 
           type="password"
+           name="password"
           placeholder="Enter your password"
           class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
           required
@@ -69,6 +77,7 @@
         <label class="block text-sm font-medium text-green-700">Confirm Password</label>
         <input 
           type="password"
+           name="confirm_password"
           placeholder="Confirm your password"
           class="mt-1 w-full px-4 py-2 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
           required
